@@ -39,4 +39,6 @@ public class Car extends Vehicle {
     public void land(){
 
     }
+    public void startSwimming(){}
+    public void stopSwimming(){}
 }

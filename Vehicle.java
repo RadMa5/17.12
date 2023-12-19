@@ -1,4 +1,4 @@
-public abstract class Vehicle implements Flyable{
+public abstract class Vehicle implements Flyable, Swimmable{
     protected int id;
     protected String brand;
     protected String model;

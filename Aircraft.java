@@ -29,4 +29,6 @@ public class Aircraft extends Vehicle implements Flyable{
     public void displayInfo(){
         System.out.println(brand + " " + model + "(" + year + "). Unique ID is " + id + ". Maximum altitude is " + maxAltitude);
     }
+    public void startSwimming(){}
+    public void stopSwimming(){}
 }

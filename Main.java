@@ -14,5 +14,11 @@ public class Main {
         v2.land();
         v2.displayInfo();
 
+        Vehicle v3 = new Boat(03, "Brand", "Boat", 2003, 150);
+        v3.startEngine();
+        v3.startSwimming();
+        v3.stopSwimming();
+        v3.stopEngine();
+        v3.displayInfo();
     }
 }
