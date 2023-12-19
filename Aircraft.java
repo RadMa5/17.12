@@ -1,4 +1,4 @@
-public class Aircraft extends Vehicle implements Flyable{
+public class Aircraft extends Vehicle{
     private int maxAltitude;
     protected boolean isFlying;
     
