@@ -7,6 +7,7 @@ public class Car extends Vehicle {
         this.fuelCapacity = fuelCapacity;
     }
 
+    @Override
     public void refuel(int liters){
         if (currentFuelLevel + liters > fuelCapacity){
             currentFuelLevel = fuelCapacity;
@@ -21,4 +22,21 @@ public class Car extends Vehicle {
         System.out.println(brand + " " + model + "(" + year + "). Unique ID is " + id + ". Current fuel level is " + currentFuelLevel);
     }
 
+    @Override
+    public void startEngine(){
+        if (currentFuelLevel == 0){
+            System.out.println("Not enough fuel");
+        } else {
+            isOn = true;
+            System.out.println("The engine is on");
+        }
+
+    }
+
+    public void takeOff(){
+
+    }
+    public void land(){
+
+    }
 }

@@ -1,10 +1,10 @@
-public abstract class Vehicle{
+public abstract class Vehicle implements Flyable{
     protected int id;
     protected String brand;
     protected String model;
     protected int year;
-    private boolean isOn;
-    private int speed;
+    protected boolean isOn;
+    protected int speed;
 
     public Vehicle(int id, String brand, String model, int year){
         this.id = id;
@@ -16,10 +16,12 @@ public abstract class Vehicle{
     //All methods below should be overridden in consequent subclasses
     public void startEngine(){
         isOn = true;
+        System.out.println("The engine is on");
 
     }
     public void stopEngine(){
         isOn = false;
+        System.out.println("The engine is off");
     }
     public void accelerate(int speed){
         if (isOn){
@@ -33,4 +35,8 @@ public abstract class Vehicle{
     }
 
     abstract void displayInfo();
+
+    public void refuel(int fuel){
+
+    }
 }
