@@ -1,8 +1,8 @@
-public abstract class Vehicle implements Flyable, Swimmable {
-    private int id;
-    private String brand;
-    private String model;
-    private int year;
+public abstract class Vehicle{
+    protected int id;
+    protected String brand;
+    protected String model;
+    protected int year;
     private boolean isOn;
     private int speed;
 
@@ -16,12 +16,17 @@ public abstract class Vehicle implements Flyable, Swimmable {
     //All methods below should be overridden in consequent subclasses
     public void startEngine(){
         isOn = true;
+
     }
     public void stopEngine(){
         isOn = false;
     }
     public void accelerate(int speed){
-        this.speed = speed;
+        if (isOn){
+            this.speed = speed;
+        } else {
+            System.out.println("Engine is turned off");
+        }
     }
     public void brake(){
         speed = 0;
